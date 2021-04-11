@@ -1,0 +1,43 @@
+//
+// //////////////////////////////////////////////////
+// ==================================================
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// P O R T F O L I O   S L I D E
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// ==================================================
+// //////////////////////////////////////////////////
+//
+
+.portfolio.carousel{
+
+   .container{
+      position: relative;
+   
+      &::before,&::after{
+         position: absolute;
+         top: 50%;
+         z-index: 999;
+         font-weight: 200;
+         font-size: clamp(3rem, 12vw, 16rem);
+         mix-blend-mode: difference;
+         color: $primary;
+         transform-origin: top;
+         text-transform: uppercase;
+      }
+      
+      &::before {
+         content: 'port';
+         top: 40%;
+         transform: rotate(-87deg) translateY(-50%);
+         left: -16.5vw;
+      }
+      &::after {
+         content: 'folio';
+         top: 60%;
+         transform: rotate(85deg) translateY(-50%);
+         right: -16vw;
+      }
+
+   } 
+
+} //.portfolio

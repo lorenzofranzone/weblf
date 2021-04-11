@@ -1,0 +1,31 @@
+//
+// //////////////////////////////////////////////////
+// ==================================================
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// C U S T O M   O W L   C A R O U S E L
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// ==================================================
+// //////////////////////////////////////////////////
+//
+
+.owl-carousel .owl-stage {
+  display: flex;
+}
+
+.owl-nav{
+  margin-top: 3rem!important;
+  text-align: center;
+  .owl-prev i,
+  .owl-next i{ padding: 1rem!important; }
+}
+
+.owl-carousel .owl-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.owl-carousel.clients .owl-item img {
+  object-fit: contain;
+}

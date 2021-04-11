@@ -1,0 +1,168 @@
+//
+// //////////////////////////////////////////////////
+// ==================================================
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// C U S T O M   F R A M E W O R K   X L F
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// ==================================================
+// //////////////////////////////////////////////////
+//
+
+//
+// ==================================================
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// M I X I N S
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// ==================================================
+//
+
+//
+// Text align for every breakpoint
+//
+
+@mixin create-texts-align{
+   
+   @each $break, $slug in $grid-breakpoints{
+      @media screen and (min-width: #{$slug}){
+         @for $i from 1 through length($grid-breakpoints){
+            .txt-#{$break}-left{ text-align: left!important; }
+            .txt-#{$break}-right{ text-align: right!important; }
+            .txt-#{$break}-center{ text-align: center!important; }
+            .txt-#{$break}-justify{ text-align: justify!important; }
+            .txt-#{$break}-wrap{ white-space: normal!important; }
+            .txt-#{$break}-nowrap{ white-space: nowrap!important; }
+         }
+      }
+   }
+   
+}
+
+
+// Sizes for every breakpoint
+@mixin create-sizes{
+
+   @each $break, $slug in $grid-breakpoints{
+      @media screen and (min-width: #{$slug}){
+         @for $i from 1 through 10{
+            
+            // Width
+            .w-#{$break}-#{$i}0p{
+            width: #{$i * 10%};
+            }
+            
+            .w-#{$break}-#{$i}0v{
+            width: #{$i * 10}vw;
+            }
+
+            .maxw-#{$break}-#{$i}0p{
+               max-width: #{$i * 10%};
+               }
+               
+            .maxw-#{$break}-#{$i}0v{
+               max-width: #{$i * 10}vw;
+            }
+            
+            // Height
+            .h-#{$break}-#{$i}0p{
+               height: #{$i * 10%};
+            }
+            
+            .h-#{$break}-#{$i}0v{
+               height: #{$i * 10}vh;
+            }
+
+            .minh-#{$break}-#{$i}0p{
+               min-height: #{$i * 10%};
+            }
+            
+            .minh-#{$break}-#{$i}0v{
+               min-height: #{$i * 10}vh;
+            }
+
+         }
+      }
+   }
+   
+}
+
+//
+// ==================================================
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// S I Z E
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// ==================================================
+//
+
+//
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// WIDTH
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+//
+
+@for $i from 1 through 10{
+   .w-#{$i}0p{
+      width: #{$i * 10%};
+   }
+}
+
+@for $i from 1 through 10{
+   .w-#{$i}0v{
+      width: #{$i * 10}vw;
+   }
+}
+
+.full{
+   width: 100%!important;
+   justify-content: center;
+}
+
+//
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// HEIGHT
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+//
+
+@for $i from 1 through 10{
+   .h-#{$i}0p{
+      height: #{$i * 10%};
+   }
+}
+
+@for $i from 1 through 10{
+   .h-#{$i}0v{
+      height: #{$i * 10}vh;
+   }
+}
+
+@for $i from 1 through 10{
+   .minh-#{$i}0p{
+      min-height: #{$i * 10%};
+   }
+}
+
+@for $i from 1 through 10{
+   .minh-#{$i}0v{
+      min-height: #{$i * 10}vh;
+   }
+}
+
+@for $i from 1 through 10{
+   .maxh-#{$i}0p{
+      max-height: #{$i * 10%};
+   }
+}
+
+@for $i from 1 through 10{
+   .maxh-#{$i}0v{
+      max-height: #{$i * 10}vh;
+   }
+}
+
+//
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// BREAKPOINT SIZES
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+//
+
+@include create-sizes;
+@include create-texts-align;

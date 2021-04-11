@@ -1,0 +1,190 @@
+//
+// //////////////////////////////////////////////////
+// ==================================================
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// C U S T O M   B O O T S T R A P
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// ==================================================
+// //////////////////////////////////////////////////
+//
+
+//
+// ==================================================
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// C O L O R   S Y S T E M
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// ==================================================
+//
+
+$primary:     #EE7203 !default;
+$secondary:   #0D0D0D !default;
+$light:       #EDEDED !default;
+$dark:        #0D0D0D !default;
+$success:     #198754 !default;
+$info:        #0dcaf0 !default;
+$warning:     #ffc107 !default;
+$danger:      #dc3545 !default;
+
+$yellow:      #FCFF16 !default;
+$green:       #1DD485 !default;
+$blue:        #3723FF !default;
+$magenta:     #D4137E !default;
+$red:         #EE2C01 !default;
+$dark-red:    #7B1600 !default;
+$orange:      #EE7203 !default;
+$orient:      #006B88 !default;
+$light-blue:  #41BFE1 !default;
+
+// Body
+$body-bg: $light !default;
+$body-color: $dark !default;
+
+// Theme colors
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+  "green":      $green,
+  "l-blue":     $light-blue
+) !default;
+
+// Text contrast
+$color-contrast-dark:      $light !default;
+$color-contrast-light:     $dark !default;
+
+// Tint color
+$light-blue-100: tint-color($light-blue, 80%) !default;
+$light-blue-200: tint-color($light-blue, 60%) !default;
+$light-blue-300: tint-color($light-blue, 40%) !default;
+$light-blue-400: tint-color($light-blue, 20%) !default;
+$light-blue-500: $light-blue !default;
+$light-blue-600: shade-color($light-blue, 20%) !default;
+$light-blue-700: shade-color($light-blue, 40%) !default;
+$light-blue-800: shade-color($light-blue, 60%) !default;
+$light-blue-900: shade-color($light-blue, 80%) !default;
+
+//
+// ==================================================
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// T Y P O G R A P H Y
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// ==================================================
+//
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,600;0,900;1,400;1,700&display=swap');
+
+$font-family-base: 'Montserrat';
+
+// h1{ font-weight: 900!important; }
+// h2,h3{ font-weight: 700!important; }
+// h4{ font-weight: 600!important; }
+// h5,h6{ font-weight: 500!important; }
+h1{
+  &::after{
+    content: '\2015';
+    display: block;
+    text-align: inherit;
+    background: inherit;
+    margin: -.25em 0 0;
+    font-size: 1em;
+  }
+}
+
+.vertical-text{
+  letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: .7rem;
+    font-weight: 400;
+    transform: rotate(-90deg);
+    transform-origin: left;
+    position: fixed;
+    top: 80%;
+    left: 1.5rem;
+    mix-blend-mode: screen;
+    z-index: 1040;
+    color: $primary;
+}
+
+//
+// ==================================================
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// U T I L I T I E S
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// ==================================================
+//
+
+//
+// Z-INDEX
+//
+$zindex-dropdown:                   1000 !default;
+$zindex-sticky:                     1020 !default;
+$zindex-fixed:                      1030 !default;
+$zindex-offcanvas:                  1040 !default;
+$zindex-modal-backdrop:             1050 !default;
+$zindex-modal:                      1060 !default;
+$zindex-popover:                    1070 !default;
+$zindex-tooltip:                    1080 !default;
+
+// $border-radius: 0;
+$enable-shadows: false !default;
+
+//
+// LINKS
+//
+
+$link-color:            $primary !default;
+$link-decoration:       underline !default;
+$link-shade-percentage: 20% !default;
+$link-hover-color:      shift-color($link-color, $link-shade-percentage) !default;
+$link-hover-decoration: null !default;
+
+//
+// SPACING
+//
+
+$spacer: 1rem !default;
+$spacers:
+(
+   0: 0,
+   1: $spacer / 4,
+   2: $spacer / 2,
+   3: $spacer,
+   4: $spacer * 2,
+   5: $spacer * 3,
+   6: $spacer * 5,
+   7: $spacer * 8,
+   8: $spacer * 15,
+   9: $spacer * 23,
+);
+
+//
+// GRID COLUMNS
+//
+
+$grid-gutter-width: 3rem !default;
+
+//
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// C O M P O N E N T S
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+//
+
+//
+// MODALS
+//
+
+$modal-backdrop-opacity:       .9 !default;
+$modal-content-bg:             $light !default;
+$modal-content-border-color:   $dark !default;
+$modal-header-border-color:    $dark !default;
+
+//
+// CLOSE
+//
+
+$btn-close-color:              $light !default;

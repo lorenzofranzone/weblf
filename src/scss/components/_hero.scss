@@ -1,0 +1,34 @@
+//
+// //////////////////////////////////////////////////
+// ==================================================
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// H E R O
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// ==================================================
+// //////////////////////////////////////////////////
+//
+
+.hero{
+   display: flex;
+   flex-flow: column nowrap;
+   height: auto;
+   max-height: 100vh;
+   position: relative;
+
+   .hero-img{
+      min-height: 10rem;
+      max-height: 60vh;
+      img{
+         height: 100%;
+         width: 100%;
+         object-fit: cover;
+         object-position: bottom;
+         display: block;
+      }
+   }
+   
+   .hero-text{
+      *{ letter-spacing: 1px; }
+   }
+
+} //.hero

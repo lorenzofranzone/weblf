@@ -1,0 +1,54 @@
+//
+// //////////////////////////////////////////////////
+// ==================================================
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// C T A
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// ==================================================
+// //////////////////////////////////////////////////
+//
+
+.cta{
+   position: relative;
+   color: $light;
+
+   .cta_bg{
+      position: absolute;
+      top: 0; bottom: 0; left: 0; right: 0;
+      z-index: -1;
+      &::after{
+         content: '';
+         display: block;
+         position: absolute;
+         top: 0; bottom: 0; left: 0; right: 0;
+         background: rgba($dark,.9);
+      }
+
+      img{
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: center;
+      }
+   }
+
+   .clients{
+      // display: flex;
+      // justify-content: space-between;
+      // align-items: center;
+      // flex-wrap: wrap;
+      margin: 3rem auto 0;
+      // width: 75%;
+
+      a{
+         flex: 1 1 8rem;
+         padding: 1rem;
+         display: flex;
+         align-items: center;
+         height: 6rem;
+         img{ width: 100%; height: 100%; object-fit: contain; }
+      }
+
+   } //.cta_clients
+
+} //.cta

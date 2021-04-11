@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="dist/css/app.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="position-fixed fixed-top">
+
+      <!-- Navbar -->
+      <nav id="navbar">
+        <div class="container">
+
+          <!-- Logo -->
+          <div class="navbar_logo">
+            <a href="index.html">
+              <img src="src/img/logo.svg" alt="">
+            </a>
+          </div>
+          
+          <!-- Menu -->
+          <div class="navbar_menu me-4 d-none d-lg-flex">
+            <ul class="menu">
+              <li class="menu_item"><a href="#">Chi sono</a></li>
+              <li class="menu_item"><a href="#">Grafica</a></li>
+              <li class="menu_item"><a href="#">Web</a></li>
+              <li class="menu_item"><a href="#">Contatti</a></li>
+              <li class="menu_item"><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          
+          <!-- Search -->
+          <div id="navbar_search">
+            <button class="btn btn-link btn_search" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
+            </button>
+          </div>
+
+        </div>
+      </nav> <!-- / Navbar -->
+
+      <!-- Search offcanvas -->
+      <div class="offcanvas offcanvas-bottom offcanvas_search" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+        <div class="offcanvas-body small">
+          <div id="search_form" class="mb-5">
+            <input class="form-control" type="search" placeholder="Cerca nel sito..." aria-label="Search">
+            <button class="btn btn-outline-dark" type="submit">Cerca</button>
+          </div>
+        </div>
+      </div>
+
+    </header>
+
+    <!-- MAIN -->
+    <main>
+
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-img ratio ratio-21x9">
+           <img src="src/img/hero.svg" class="img-fluid bg-dark" alt="">
+        </div>
+        <div class="hero-text text-center py-3 py-md-5">
+           <div class="container">
+              <div class="row">
+                 <div class="col-lg-8 offset-lg-2">
+                    <span class="lead text-uppercase text-muted">Freelance</span>
+                    <h1 class="display-3 text-uppercase">Graphic & Web Designer</h1>
+                    <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, perferendis! Nostrum ipsa, incidunt illo quibusdam aliquid in, dolores excepturi eaque dolore aperiam molestiae sit, non ea. Commodi architecto veritatis repellat!</p>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div class="vertical-text d-none d-lg-block">
+           <i class="bi bi-geo-alt-fill me-1"></i> Sanremo - <i class="bi bi-globe me-1"></i> Online
+        </div>
+      </section>
+
+      <!-- PORTFOLIO -->
+      <section class="portfolio carousel container-fluid py-5 py-md-6 bg-dark">
+        <div class="container">
+           <div class="owl-carousel owl-theme portfolio">
+              <img src="src/img/pic.jpeg" alt="">
+              <img src="src/img/hero.svg" alt="">
+              <img src="src/img/pic.jpeg" alt="">
+              <img src="src/img/pic.jpeg" alt="">
+              <img src="src/img/pic.jpeg" alt="">
+              <img src="src/img/pic.jpeg" alt="">
+           </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section class="services home"></section>
+
+      <!-- BLOG -->
+      <section class="blog carousel py-5 py-md-6">
+        <div class="container">
+
+           <div class="section-title text-center display-4 text-uppercase mb-5">
+              <h2>Le ultime dal blog</h2>
+           </div>
+
+           <div class="owl-carousel blog test"></div>
+
+        </div> <!-- /.container -->
+      </section>
+
+      <!-- CALL TO ACTION -->
+      <section class="cta text-center py-6">
+        <div class="cta_bg">
+          <img src="http://weblore.local/wp-content/uploads/2021/03/pic-scaled.jpeg" alt="">
+        </div>
+        <div class="container">
+          <h2 class="display-5 text-uppercase">Lavoriamo insieme</h2>
+          <p class="lead"><p>Parlami del tuo progetto e valutiamo insieme le migliori soluzioni di realizzazione.<br />
+          Scrivimi senza impegno per informazioni e preventivi oppure fissiamo un appuntamento per prenotare una o più consulenze.</p>
+          </p>
+          <a href="" class="btn btn-outline-primary">Iniziamo!</a>
+          
+          <!-- Clients -->
+          <div class="owl-carousel owl-theme clients mt-6 w-lg-60p"></div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="py-6 container-fluid bg-dark text-light">
+      <div class="container">
+          <div class="row">
+          <div class="col-md-6 col-lg-3">
+                          </div>
+          <div class="col-md-6 col-lg-3">
+                          </div>
+          <div class="col-md-6 col-lg-3">
+                          </div>
+          <div class="col-md-6 col-lg-3">
+                          </div>
+          </div>
+      </div>
+    </footer>
+
+
+    <!-- FOOTER BOTTOM --> 
+    <div id="footer-bottom" class="pb-6 pb-lg-3 pt-3 text-muted">
+      <div class="container">
+        <small>Copyright 2021 - Lorenzo Franzone</small><small><a href="#" class="ms-0 ms-lg-2 d-block d-lg-inline-block">Privacy & Cookie Policy</a></small>
+      </div>
+    </div>
+
+    <!-- MOBILE ICONS -->
+    <div class="mobile-menu position-fixed fixed-bottom bg-dark text-light d-flex d-lg-none">
+      <ul class="nav nav-pills nav-fill p-1">
+        <li class="nav-item" title="Grafica">
+          <a class="nav-link" href="#"><i class="bi bi-envelope"></i></a>
+        </li>
+        <li class="nav-item" title="Profilo">
+          <a class="nav-link" href="#"><i class="bi bi-phone-vibrate"></i></a>
+        </li>
+        <li class="nav-item" title="Home">
+          <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house"></i></a>
+        </li>
+        <li class="nav-item" title="Contatti">
+          <a class="nav-link" href="#"><i class="bi bi-info-square"></i></a>
+        </li>
+        <li id="navicon" class="nav-item" title="Menu">
+          <ul id="navicon_icon">
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </div> <!-- / Mobile icons -->
+    
+    <div id="modal-menu">
+      <div class="container">
+        <div class="navbar_menu">
+          <ul class="menu direction-column">
+            <li class="menu_item"><a href="http://www.google.it">Chi sono</a></li>
+            <li class="menu_item"><a href="#">Grafica</a></li>
+            <li class="menu_item"><a href="#">Web</a></li>
+            <li class="menu_item"><a href="#">Contatti</a></li>
+            <li class="menu_item"><a href="#">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>   
+
+    <script src="dist/js/app.js"></script>
+
+    <!-- Services -->
+    <script id="template-services-home" type="text/x-handlebars-template">
+        {{#each service}}
+        <div class="{{this.slug}} py-6">
+          <div class="container">
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="service_image mb-5">
+                  <img src="src/img/pic.jpeg" alt="">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="service_text">
+                  <h2 class="service_title">{{this.title}}</h2>
+                  <p class="lead">{{this.text}}</p>
+                  <ul class="small">
+                    {{#each this.list}}
+                    <li>{{this}}</li>
+                    {{/each}}
+                  </ul>
+                  <a href="#" class="btn btn-sm btn-outline-dark">{{this.button}}</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div> 
+        {{/each}}
+    </script>
+    
+    <!-- Blog -->
+    <script id="template-blog-home" type="text/x-handlebars-template">
+        {{#each post}}
+        <article class="post-card">
+          <!-- Blog Image -->
+          <a href="#">
+            <div class="post-card_image ratio ratio-16x9">
+                  <img src="/src/img/pic.jpeg" alt="...">
+            </div>
+          </a>
+          
+          <div class="post-card_content">
+             <div class="info">
+              {{#each this.category}}
+              <small>{{this}}</small>
+              {{/each}}
+             </div>
+             <div class="title mt-3">
+                <a href="#"><h5>{{title}}</h5></a>
+             </div>
+             <div class="more">
+                <small>{{date}}</small>
+                <a href="#"><i class="bi bi-arrow-bar-right"></i></a>
+             </div>
+          </div>
+        </article> 
+        {{/each}}
+    </script>
+    
+    <!-- Clients -->
+    <script id="template-clients-home" type="text/x-handlebars-template">
+      {{#each client}}
+      <a href="#">
+        <img src="{{logo}}" alt="" />
+      </a>
+      {{/each}}
+    </script>
+    
+</body>
+</html>

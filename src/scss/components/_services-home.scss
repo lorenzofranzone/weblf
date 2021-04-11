@@ -1,0 +1,83 @@
+//
+// //////////////////////////////////////////////////
+// ==================================================
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// S E R V I C E S   H O M E
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// ==================================================
+// //////////////////////////////////////////////////
+//
+
+.services.home{
+
+   >div:nth-child(odd){
+      @media screen and (min-width: 768px) {
+         [class*="col"]:first-child{
+            order: 1;
+         }
+      }
+      .service_image{
+         &::before{
+            top: -10%; left: 20%;
+            transform: rotate(3deg);
+         }
+      }
+   }
+
+   .row{
+      align-items: center;
+
+      .service_image{
+         position: relative;
+         
+         &::before{
+            content: '';
+            display: block;
+            width: 90%;
+            height: 90%;
+            background: $dark;
+            position: absolute;
+            bottom: -10%; left: -10%;
+            transform: rotate(-3deg);
+         }
+
+         img{
+            width: auto;
+            max-width: 100%;
+            max-height: 25rem;
+            object-fit: cover;
+            object-position: center;
+            position: relative;
+            z-index: 1;
+         }
+
+      }
+
+      .service_text{
+
+         .service_title{
+            text-transform: uppercase;
+         }
+         
+         ul{
+            list-style: none;
+            text-transform: uppercase;
+            padding-left: 0;
+   
+            &::before{
+               content: '';
+               display: block;
+               width: 20%;
+               height: .25rem;
+               background: $dark;
+               margin: 2rem 0;
+            }
+            
+            li{ margin: .75rem 0; }
+            
+         }
+      }
+
+   }
+
+} //.services.home
